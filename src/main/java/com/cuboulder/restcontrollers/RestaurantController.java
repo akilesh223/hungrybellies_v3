@@ -1,0 +1,49 @@
+package com.cuboulder.restcontrollers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cuboulder.models.Restaurant;
+
+import com.cuboulder.service.RestaurantService;
+
+@RestController
+public class RestaurantController {
+
+	@Autowired
+	private RestaurantService restaurantService;
+	
+	@RequestMapping("/restaurant")
+	public List<Restaurant> getAllRestaurant(){
+		return restaurantService.getAllRestaurant();
+	}
+	
+	@RequestMapping("/restaurant/{id}")
+	public Restaurant getRestaurant(@PathVariable String id){
+		return restaurantService.getRestaurant(id);
+	}
+	
+	@RequestMapping(method=RequestMethod.POST,value="/restaurant")
+	public void addRestaurant(@RequestBody Restaurant restaurant){
+		 restaurantService.addRestaurant(restaurant);
+	}
+	
+	@RequestMapping(method=RequestMethod.PUT,value="/restaurant/{id}")
+	public void updateRestaurant(@RequestBody Restaurant restaurant,@PathVariable String id){
+		restaurantService.updateRestaurant(restaurant,id);
+	}
+	
+	@RequestMapping(method=RequestMethod.DELETE,value="/restaurant/{id}")
+	public void deleteRestaurant(@PathVariable String id){
+		restaurantService.deleteRestaurant(id);
+	}
+	
+	
+	
+}
