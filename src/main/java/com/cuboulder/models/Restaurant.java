@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 
 import javax.persistence.Id;
@@ -23,13 +23,13 @@ public class Restaurant {
 
 	private String address;
 	
-	@OneToMany
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<Item> listOfItems;
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	private Rating rating;
 	
-	@OneToMany
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<Review> reviews;
 	
 	private Timestamp openTime;

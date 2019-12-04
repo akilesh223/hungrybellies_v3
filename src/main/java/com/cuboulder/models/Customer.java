@@ -3,6 +3,7 @@ package com.cuboulder.models;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -15,7 +16,7 @@ public class Customer {
 	private String id;
 	
 
-	@OneToMany
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<Address> address;
 
 	private String firstName;

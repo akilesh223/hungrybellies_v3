@@ -2,7 +2,7 @@ package com.cuboulder.models;
 
 import java.util.List;
 
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 
 import javax.persistence.Id;
@@ -15,7 +15,7 @@ public class FoodOrder {
 	@Id
 	private String id;
 	
-	@OneToMany
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<Item> items;
 	
 	private int cost;

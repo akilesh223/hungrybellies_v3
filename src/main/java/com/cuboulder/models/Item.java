@@ -2,6 +2,7 @@ package com.cuboulder.models;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 
 import javax.persistence.Id;
@@ -19,7 +20,7 @@ public class Item {
 
 	private String itemName;
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	private Rating rating;
 	
 	private String cusine;

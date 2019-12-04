@@ -1,5 +1,6 @@
 package com.cuboulder.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,18 @@ public class RestaurantService {
 
 	public void deleteRestaurant(String id) {
 		restaurantRepository.delete(id);
+	}
+
+	public List<Restaurant> getAllRestaurant(String name) {
+		//System.out.println("-----getAll-----------");
+		 List<Restaurant> rs = (List<Restaurant>) restaurantRepository.findAll();
+		 List<Restaurant> r = new ArrayList<Restaurant>();
+		 
+		 for(int i=0;i<rs.size();i++) {
+			 if(rs.get(i).getName().contains(name)) r.add(rs.get(i));
+		 }
+		// System.out.println(r);
+		 return r;
 	}
 
 }
