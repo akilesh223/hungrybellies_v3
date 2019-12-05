@@ -23,12 +23,26 @@ public class Restaurant {
 
 	private String address;
 	
+	private String imgUrl;
+	
 	@OneToMany(cascade=CascadeType.ALL)
 	private List<Item> listOfItems;
 	
 	@OneToOne(cascade=CascadeType.ALL)
 	private Rating rating;
 	
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
+
+
 	@OneToMany(cascade=CascadeType.ALL)
 	private List<Review> reviews;
 	
