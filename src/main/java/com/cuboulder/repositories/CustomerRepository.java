@@ -6,4 +6,6 @@ import com.cuboulder.models.Customer;
 
 public interface CustomerRepository extends CrudRepository<Customer, String>{
 
+	public Customer findByEmaiId(String emaiId);
+	
 }

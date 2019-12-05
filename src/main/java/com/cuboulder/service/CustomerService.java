@@ -48,4 +48,9 @@ public class CustomerService {
 		customerRepository.delete(id);
 	}
 
+	public Customer getCustomerLogin(String email) {
+		
+		return  customerRepository.findByEmaiId(email);
+	}
+
 }

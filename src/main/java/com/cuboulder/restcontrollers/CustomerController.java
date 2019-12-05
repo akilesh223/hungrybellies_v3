@@ -29,6 +29,11 @@ public class CustomerController {
 		return customerService.getCustomer(id);
 	}
 	
+	@RequestMapping("/customerLogin/{email}")
+	public Customer getCustomerLogin(@PathVariable String email){
+		return customerService.getCustomerLogin(email);
+	}
+	
 	@RequestMapping(method=RequestMethod.POST,value="/customer")
 	public void addCustomer(@RequestBody Customer customer){
 		customerService.addCustomer(customer);
