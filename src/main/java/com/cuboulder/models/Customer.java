@@ -29,6 +29,7 @@ public class Customer {
 	
 	private String password;
 	
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<FoodOrder> listOfOrders;
 	
 	
