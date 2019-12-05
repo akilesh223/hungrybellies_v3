@@ -28,6 +28,8 @@ public class RestaurantUser {
 	
 	private String emaiId;
 	
+	private String password;
+	
 	private Date createdAt;
 	
 

@@ -27,6 +27,8 @@ public class Customer {
 	
 	private String emaiId;
 	
+	private String password;
+	
 	private Date createdAt;
 	
 	public String getId() {
