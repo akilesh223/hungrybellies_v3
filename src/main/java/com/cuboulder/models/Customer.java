@@ -29,6 +29,19 @@ public class Customer {
 	
 	private String password;
 	
+	private List<FoodOrder> listOfOrders;
+	
+	
+	public List<FoodOrder> getListOfOrders() {
+		return listOfOrders;
+	}
+
+
+	public void setListOfOrders(List<FoodOrder> listOfOrders) {
+		this.listOfOrders = listOfOrders;
+	}
+
+
 	public String getPassword() {
 		return password;
 	}
