@@ -29,6 +29,15 @@ public class Customer {
 	
 	private String password;
 	
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	private Date createdAt;
 	
 	public String getId() {

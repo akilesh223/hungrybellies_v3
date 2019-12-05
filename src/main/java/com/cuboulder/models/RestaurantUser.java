@@ -32,7 +32,15 @@ public class RestaurantUser {
 	
 	private Date createdAt;
 	
+	
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public List<Restaurant> getRestaurants() {
 		return restaurants;
