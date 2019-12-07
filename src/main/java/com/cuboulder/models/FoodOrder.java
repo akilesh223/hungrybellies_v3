@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 
 @Entity
@@ -22,6 +23,8 @@ public class FoodOrder {
 	
 	private boolean status;
 	
+	@OneToOne(cascade=CascadeType.ALL)
+	private Customer customer;
 	
 
 	public String getId() {
