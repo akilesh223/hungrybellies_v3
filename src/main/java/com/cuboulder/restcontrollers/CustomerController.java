@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cuboulder.models.Customer;
+import com.cuboulder.models.FoodOrder;
 import com.cuboulder.service.CustomerService;
 
 
@@ -47,6 +48,20 @@ public class CustomerController {
 	@RequestMapping(method=RequestMethod.DELETE,value="/customer/{id}")
 	public void deleteCustomer(@PathVariable String id){
 		customerService.deleteCustomer(id);
+	}
+	
+	
+	@RequestMapping(method=RequestMethod.POST,value="/customer/{email}/order")
+	public void updateCustomerOrder(@RequestBody FoodOrder foodOrder,@PathVariable String email){
+		
+		Customer cust = customerService.getCustomerLogin(email);
+		
+		List<FoodOrder> fd = cust.getListOfOrders();
+		fd.add(foodOrder);
+		
+		cust.setListOfOrders(fd);
+		
+		customerService.updateCustomer(cust,cust.getId());
 	}
 	
 	
