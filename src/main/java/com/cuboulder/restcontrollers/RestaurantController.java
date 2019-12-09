@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cuboulder.models.Restaurant;
-
+import com.cuboulder.models.Review;
 import com.cuboulder.service.RestaurantService;
 
 @RestController
@@ -43,6 +43,18 @@ public class RestaurantController {
 	public void addRestaurant(@RequestBody Restaurant restaurant){
 		 restaurantService.addRestaurant(restaurant);
 	}
+	
+	@RequestMapping(method=RequestMethod.POST,value="/restaurantReview/{id}")
+	public void addRestaurant(@RequestBody Review review,@PathVariable String id){
+		 Restaurant rw = restaurantService.getRestaurant(id);
+		 List<Review> re  = rw.getReviews();
+		 re.add(review);
+		 
+		 rw.setReviews(re);
+		 restaurantService.updateRestaurant(rw, rw.getId());
+	}
+	
+	
 	
 	@RequestMapping(method=RequestMethod.PUT,value="/restaurant/{id}")
 	public void updateRestaurant(@RequestBody Restaurant restaurant,@PathVariable String id){
