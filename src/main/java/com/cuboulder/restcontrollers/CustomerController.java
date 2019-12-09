@@ -3,6 +3,7 @@ package com.cuboulder.restcontrollers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,8 +51,8 @@ public class CustomerController {
 		customerService.deleteCustomer(id);
 	}
 	
-	
-	@RequestMapping(method=RequestMethod.POST,value="/customer/{email}/order")
+	//@CrossOrigin(origins="*", methods= {RequestMethod.POST,RequestMethod.OPTIONS,RequestMethod.GET,RequestMethod.DELETE})
+	@RequestMapping(method=RequestMethod.POST,value="/customer/order/{email}")
 	public void updateCustomerOrder(@RequestBody FoodOrder foodOrder,@PathVariable String email){
 		
 		Customer cust = customerService.getCustomerLogin(email);
@@ -62,7 +63,11 @@ public class CustomerController {
 		cust.setListOfOrders(fd);
 		
 		customerService.updateCustomer(cust,cust.getId());
+		
+	//	return cust;
 	}
 	
+	
+
 	
 }

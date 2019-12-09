@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: Hungry Bellies Food Delivery App
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: DELL
+Built-By: pradyoth
 Implementation-Vendor-Id: com.cuboulder.ooad
-Build-Jdk: 1.8.0_221
+Build-Jdk: 1.8.0_211
 Implementation-URL: http://projects.spring.io/spring-boot/hungrybellie
  s_v3/
 Created-By: Maven Integration for Eclipse

@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cuboulder.models.Customer;
 import com.cuboulder.models.FoodOrder;
+import com.cuboulder.service.CustomerService;
 import com.cuboulder.service.OrderService;
 
 @RestController
@@ -17,6 +19,8 @@ public class OrderController {
 
 	@Autowired
 	private OrderService orderService;
+	
+	
 	
 	@RequestMapping("/order")
 	public List<FoodOrder> getAllOrder(){
@@ -40,4 +44,4 @@ public class OrderController {
 	}
 	
 	
-}
+	}
