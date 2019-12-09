@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-
+// this user is different from customer as he is restaurant owner
 
 @Entity
 public class RestaurantUser {

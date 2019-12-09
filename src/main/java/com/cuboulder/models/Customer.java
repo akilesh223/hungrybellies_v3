@@ -8,6 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+
+//Customer class to store user profile details
+
 @Entity
 public class Customer {
 

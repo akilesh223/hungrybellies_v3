@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 
+// Address class that store delivery addres of order
+
 @Entity
 public class Address {
 	
@@ -21,19 +23,7 @@ public class Address {
 	
 	private String pinCode;
 	
-//	public Address() {
-//		
-//	}
-//
-//	public Address(String id, String steetLine1, String steetLine2, String city, String state, String pinCode) {
-//		super();
-//		this.id = id;
-//		this.steetLine1 = steetLine1;
-//		this.steetLine2 = steetLine2;
-//		this.city = city;
-//		this.state = state;
-//		this.pinCode = pinCode;
-//	}
+
 
 	
 	

@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 
+// class to store rating of items
+
 @Entity
 public class Rating {
 

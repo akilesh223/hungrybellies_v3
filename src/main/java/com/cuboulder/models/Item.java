@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 
-
+// food item details are stored
 
 
 @Entity

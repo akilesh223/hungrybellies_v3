@@ -12,6 +12,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 
+// this class stores the order details
+
+
 @Entity
 public class FoodOrder {
 	

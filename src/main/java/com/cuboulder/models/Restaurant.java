@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-
+// class to store restaurant details
 
 @Entity
 public class Restaurant {

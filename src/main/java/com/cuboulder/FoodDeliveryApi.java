@@ -3,6 +3,13 @@ package com.cuboulder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 
+ * *
+ * Main class to start the application
+ *
+ */
+
 @SpringBootApplication
 public class FoodDeliveryApi {
 

@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 
+//this class  to store reviews of restaurant
+
+
 @Entity
 public class Review {
 
